@@ -1,0 +1,49 @@
+# =============================================================================
+# DOCTOR AI - DEPENDENCIES
+# =============================================================================
+
+# 🌐 Web Framework & UI
+streamlit>=1.28.0
+flask>=2.3.0
+flask-cors>=4.0.0
+
+# 🤖 AI & Machine Learning
+openai>=1.0.0
+together>=0.2.0
+scikit-learn>=1.3.0
+joblib>=1.3.0
+
+# 📊 Data Processing & Analysis
+pandas>=2.0.0
+numpy>=1.24.0
+
+# 🔧 Utilities & Environment
+python-dotenv>=1.0.0
+requests>=2.31.0
+python-json-logger>=2.0.0
+uuid
+
+# 🖼️ Image Processing (for CCCD OCR)
+Pillow>=10.0.0
+opencv-python>=4.8.0
+
+# 📝 Text Processing
+regex>=2023.0.0
+
+# 🔐 Security & Authentication
+cryptography>=41.0.0
+PyJWT>=2.8.0
+
+# ⚡ Performance & Monitoring
+psutil>=5.9.0
+prometheus-client>=0.17.0
+
+# 🧪 Development & Testing (optional)
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+
+# 📱 Additional UI Components
+streamlit-option-menu>=0.3.0
+streamlit-lottie>=0.0.5
+plotly>=5.15.0
