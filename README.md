@@ -1,75 +1,78 @@
 # 🌟 VITA - VinBig Intelligent Treatment Assistant  
-> 🚀 *AI đồng hành cùng sức khỏe của bạn*  
-<img src="asset/image.png" alt="Homepage" width="600" style="border-radius: 10px;">
+> 💡 *AI thông minh – Đồng hành cùng sức khỏe của bạn*  
+
+![Homepage](asset/image.png)
+
+---
 
 ## 🎯 Giới thiệu  
 
-**VITA** là nền tảng **trợ lý y tế thông minh** ứng dụng trí tuệ nhân tạo, được phát triển bởi **VinBig AI**.  
-Ứng dụng hướng đến việc **hỗ trợ bác sĩ** và **cá nhân hóa trải nghiệm chăm sóc sức khỏe** cho từng người dùng.  
+**VITA** là nền tảng **trợ lý y tế thông minh** do **VinBig AI** phát triển, ứng dụng công nghệ AI tiên tiến để:  
+- **Hỗ trợ bác sĩ** trong phân tích, chẩn đoán và ra quyết định điều trị  
+- **Cá nhân hóa chăm sóc sức khỏe** cho từng người dùng  
+- **Đồng hành lâu dài** trong việc theo dõi, phòng ngừa và cải thiện sức khỏe cộng đồng  
+
+---
 
 ## 🚀 Tính năng chính  
 
-- 🩺 **Phân tích nguy cơ sức khỏe** (ví dụ: tiểu đường, bệnh mãn tính) với độ chính xác cao  
-- 💬 **Chatbot tư vấn y tế thông minh** – trò chuyện tự nhiên, cá nhân hóa theo từng bệnh nhân  
-- 🆔 **Nhận dạng thông tin cá nhân (CCCD)** – nhanh chóng, an toàn và tiện lợi  
-- 📊 **Theo dõi & quản lý tình trạng sức khỏe** – giúp người dùng chủ động trong hành trình chăm sóc sức khỏe  
+- 🩺 **Phân tích nguy cơ sức khỏe** (tiểu đường, bệnh mãn tính) với độ chính xác cao  
+- 💬 **Chatbot tư vấn y tế thông minh** – hội thoại tự nhiên, thân thiện và cá nhân hóa  
+- 🆔 **Nhận dạng CCCD tự động** – nhập liệu nhanh chóng, chính xác và bảo mật  
+- 📊 **Theo dõi & quản lý sức khỏe cá nhân** – chủ động hơn trong hành trình chăm sóc bản thân  
+
+---
 
 ## 🔬 Công nghệ AI tích hợp  
 
-- Ứng dụng trí tuệ nhân tạo toàn diện trong y tế  
-- Phân tích dữ liệu y tế đa chiều để hỗ trợ quyết định lâm sàng  
-- Trợ lý ảo thông minh, linh hoạt và dễ mở rộng  
-- Cam kết bảo mật và tuân thủ các tiêu chuẩn quốc tế  
+- Ứng dụng **AI toàn diện trong y tế**: từ xử lý ngôn ngữ, phân tích dữ liệu đến hỗ trợ lâm sàng  
+- Hệ thống **linh hoạt, dễ mở rộng**, sẵn sàng tích hợp thêm nhiều tính năng mới  
+- **Tuân thủ chuẩn bảo mật quốc tế**, đảm bảo an toàn dữ liệu người dùng  
+
+---
 
 ## 🎯 Sứ mệnh  
 
-VITA cam kết mang đến một **giải pháp y tế an toàn, chính xác và hiệu quả**,  
-giúp bác sĩ đưa ra quyết định điều trị tối ưu và đồng hành cùng bệnh nhân trong hành trình chăm sóc sức khỏe.  
-
----
-✨ *VITA – AI đồng hành cùng sức khỏe của bạn.*
-
+VITA hướng đến việc trở thành **người bạn đồng hành tin cậy của bác sĩ và bệnh nhân**,  
+mang lại trải nghiệm y tế **an toàn – chính xác – hiệu quả**,  
+góp phần xây dựng một **tương lai khỏe mạnh hơn cho tất cả mọi người**.  
 
 ---
 
-## 🖼️ Giao diện ứng dụng
+## 🖼️ Giao diện ứng dụng  
 
-<div align="center">
+### 🏠 Trang chủ  
+![Homepage](asset/Homepage_2.jpeg)  
 
-### 🏠 **Trang chủ**
-<img src="asset/Homepage_2.jpeg" alt="Homepage" width="600" style="border-radius: 10px;">
+### 🩺 Phân tích nguy cơ tiểu đường  
+![Diabetes Doctor](asset/Diabete_1.jpeg)  
 
-### 🩺 **Phân tích nguy cơ tiểu đường**
-<img src="asset/Diabete_1.jpeg" alt="Diabetes Doctor" width="600" style="border-radius: 10px;">
+### 💬 Chatbot tư vấn y tế  
+![Chatbot](asset/Chatbot_1.jpeg)  
 
-### 💬 **Chatbot tư vấn y tế**
-<img src="asset/Chatbot_1.jpeg" alt="Chatbot" width="600" style="border-radius: 10px;">
-
-### 📱 **Các tính năng khác**
-<div style="display: flex; justify-content: center; gap: 20px;">
-  <img src="asset/Homepage_3.jpeg" alt="Feature 1" width="250" style="border-radius: 10px;">
-  <img src="asset/Diabete_2.jpeg" alt="Feature 2" width="250" style="border-radius: 10px;">
-  <img src="asset/Chatbot_2.jpeg" alt="Feature 3" width="250" style="border-radius: 10px;">
-</div>
-
-</div>
+### 📱 Các tính năng khác  
+<p align="center">
+  <img src="asset/Homepage_3.jpeg" alt="Feature 1" width="250">
+  <img src="asset/Diabete_2.jpeg" alt="Feature 2" width="250">
+  <img src="asset/Chatbot_2.jpeg" alt="Feature 3" width="250">
+</p>  
 
 ---
 
-## 🚀 Hướng dẫn cài đặt và sử dụng
+## 🚀 Hướng dẫn cài đặt và sử dụng  
 
-### 📋 **Yêu cầu**
-- **Python 3.9** trở lên
-- **4GB RAM** trở lên
-- **Kết nối internet** để sử dụng AI
+### 📋 Yêu cầu  
+- **Python 3.9** trở lên  
+- **4GB RAM** trở lên  
+- **Kết nối internet** để sử dụng AI  
 
-### 🛠️ **Cài đặt**
+### 🛠️ Cài đặt  
 
-**Bước 1: Tải về và cài đặt**
+**Bước 1: Clone dự án**  
 ```bash
-# Tải project về máy
-git clone https://github.com/your-repo/doctor-ai.git
-cd doctor-ai
+git clone https://github.com/langkhachhoha/vita-health-assistant.git
+cd vita-health-assistant
+
 
 # Cài đặt các thư viện cần thiết
 pip install -r Doctor_app/requirements.txt
