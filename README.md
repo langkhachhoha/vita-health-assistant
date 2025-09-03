@@ -140,7 +140,7 @@ streamlit run Doctor_app/Homepage.py
 #### **🆔 Quản lý hồ sơ**
 - Chụp ảnh CCCD để tạo hồ sơ bệnh nhân tự động
 - Lưu trữ và tra cứu thông tin y tế
-
+![Homepage](asset/Diabete_3.jpeg)  
 ---
 
 ## 🔮 Tính năng sắp ra mắt
