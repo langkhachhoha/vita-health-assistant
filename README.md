@@ -42,7 +42,7 @@ góp phần xây dựng một **tương lai khỏe mạnh hơn cho tất cả m�
 ## 🖼️ Giao diện ứng dụng  
 
 ### 🏠 Trang chủ  
-![Homepage](asset/Homepage_2.jpeg)  
+![Homepage](asset/Homepage_1.jpeg)  
 
 ### 🩺 Phân tích nguy cơ tiểu đường  
 ![Diabetes Doctor](asset/Diabete_1.jpeg)  
@@ -119,7 +119,7 @@ streamlit run Doctor_app/Homepage.py
 ```
 
 ➡️ **Truy cập:** http://localhost:8501
-<img src="asset/Homepage_1.jpeg" alt="Diabetes Doctor" width="600" style="border-radius: 10px;">
+![Homepage](asset/Homepage_2.jpeg)  
 
 ### � **Cách sử dụng**
 
