@@ -1,0 +1,61 @@
+# Auto-generated URL list for Vinmec doctor crawler
+# Generated from 9 pages
+# Total doctors found: 150
+
+DOCTOR_URLS = [
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/bui-chi-nam-2955-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/bui-duc-hau-51616-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/bui-le-phuoc-thu-thao-51401-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/bui-minh-thanh-51797-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/bui-phuong-thao-2477-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/bui-thanh-quang-51751-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/bui-van-giang-51648-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/cao-thi-anh-dao-51024-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/chu-quoc-truong-4340-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/chu-thanh-son",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/chu-van-duy-51822-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/chuyen-gia-tam-ly-tran-cam-thuy-51915-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/dam-thi-minh-phuong-51225-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/dang-quang-huy-51808-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/dao-thi-mai-lan-51224-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/dinh-thi-hien-le",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/do-hoang-ha-51920-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/do-thi-ngoc-lan-50852-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/doan-duc-dung-51741-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/doan-mai-phuong-4469-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/doan-thanh-tuan",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/doan-thi-hong-hanh-1",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/doan-van-nam-51708-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/don-leigh-51508-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/dong-xuan-ha-50894-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/duong-duc-binh-51201-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/ho-thuong-dung",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/hoang-gia-du",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/hoang-minh-duc-51219-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/hoang-quynh-lan-50963-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/hoang-thanh-van-51227-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/hoang-thi-my-nhung-51506-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/hoang-thi-thanh-hoa-51663-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/la-thi-tiem-51477-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/lai-thi-nguyet-hang-51378-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/le-duy-cuong",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/le-khac-hieu-51444-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/le-tan-dat-51206-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/le-thanh-cam-51266-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/le-thi-dieu-hang",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/le-thi-hoa-51811-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/le-thi-huong-51335-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/le-thi-minh-huong-51532-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/le-thien-thai-51825-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/le-thu-phuong-50880-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/le-van-thanh-51241-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/le-viet-cuong-50985-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/luu-hong-hai-51238-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/ly-thi-thanh-ha-51855-vi",
+    "https://www.vinmec.com/vie/chuyen-gia-y-te/mai-duc-hung",
+]
+
+# Usage example:
+# from doctor_urls_config import DOCTOR_URLS
+# for url in DOCTOR_URLS:
+#     crawl_single_doctor(url)

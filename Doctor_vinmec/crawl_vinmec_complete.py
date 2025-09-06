@@ -19,7 +19,7 @@ def crawl_multiple_doctors():
         print(f"📊 Đã load {len(doctor_urls)} URLs từ file doctor_urls_list.json")
         
         # Giới hạn số lượng bác sĩ để test (có thể thay đổi)
-        max_doctors = 10  # Chỉ crawl 10 bác sĩ đầu tiên để test
+        max_doctors = 150  # Chỉ crawl 10 bác sĩ đầu tiên để test
         if len(doctor_urls) > max_doctors:
             doctor_urls = doctor_urls[:max_doctors]
             print(f"🔄 Giới hạn crawl {max_doctors} bác sĩ đầu tiên để test")
@@ -58,7 +58,7 @@ def crawl_multiple_doctors():
         if i < len(doctor_urls):
             print("⏳ Chờ 2 giây trước khi crawl tiếp...")
             import time
-            time.sleep(5)
+            # time.sleep(5)
     
     # Lưu tất cả thông tin bác sĩ
     if all_doctors:

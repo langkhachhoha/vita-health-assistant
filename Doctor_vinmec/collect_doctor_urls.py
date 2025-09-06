@@ -24,9 +24,8 @@ def collect_doctor_urls():
         'Accept-Encoding': 'gzip, deflate',
         'Connection': 'keep-alive',
     }
-    
-    # Thu thập từ trang 2 đến trang 10
-    for page_num in range(2, 11):  # 2 đến 10
+    # Thu thập từ trang 2 đến trang 20
+    for page_num in range(2, 21):  # 2 đến 20
         if page_num == 2:
             url = f"{base_url}/page_2"
         else:
@@ -62,7 +61,7 @@ def collect_doctor_urls():
                 print("⚠️ Không tìm thấy bác sĩ nào")
             
             # Delay giữa các trang
-            if page_num < 10:
+            if page_num < 100:
                 print("⏳ Chờ 3 giây trước khi tải trang tiếp...")
                 time.sleep(3)
                 
