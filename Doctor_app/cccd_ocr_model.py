@@ -17,9 +17,9 @@ dir = os.getcwd()
 load_dotenv(dotenv_path=os.path.join(dir, "Doctor_app", ".env"))
 
 # Cấu hình API
-BASE_URL = "https://mkp-api.fptcloud.com"
-FPT_API_KEY = os.getenv("FPT_API_KEY")
-MODEL_NAME = 'Llama-4-Scout-17B-16E'
+BASE_URL = "https://api.together.xyz/v1"
+FPT_API_KEY = os.getenv("TOGETHER_API_KEY")
+MODEL_NAME = 'meta-llama/Llama-4-Scout-17B-16E-Instruct'
 
 # Khởi tạo client
 client = OpenAI(
