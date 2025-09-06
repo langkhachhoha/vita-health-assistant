@@ -13,10 +13,7 @@ from datetime import datetime
 import traceback
 
 # Import OCR model
-try:
-    from cccd_ocr_model import extract_cccd_from_uploaded_file, extract_cccd_info
-except ImportError:
-    print("❌ Không thể import OCR model. Đảm bảo file cccd_ocr_model.py tồn tại.")
+from cccd_ocr_model import extract_cccd_from_uploaded_file, extract_cccd_info
 
 app = Flask(__name__)
 CORS(app)  # Cho phép CORS để Streamlit có thể gọi API

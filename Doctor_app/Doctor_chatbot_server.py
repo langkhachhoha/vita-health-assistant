@@ -2,11 +2,11 @@ import os
 import json
 from datetime import datetime
 from dotenv import load_dotenv
-from openai import OpenAI
 from flask import Flask, request, jsonify, Response
 from flask_cors import CORS
 import logging
 from convert import convert_patient_data_to_text_segments
+from openai import OpenAI
 
 # Load environment variables
 load_dotenv()
