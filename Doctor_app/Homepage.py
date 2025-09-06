@@ -45,15 +45,7 @@ st.markdown(
     f"""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
-    /* Hide Streamlit UI Elements */
-    #MainMenu {{visibility: hidden;}}
-    footer {{visibility: hidden;}}
-    header {{visibility: hidden;}}
-    .stDeployButton {{display: none;}}
-    [data-testid="stToolbar"] {{display: none;}}
-    [data-testid="stDecoration"] {{display: none;}}
-    [data-testid="stStatusWidget"] {{display: none;}}
-    [data-testid="manage-app-button"] {{display: none;}}
+
 
     /* Global Scroll Animation Setup */
     html {{

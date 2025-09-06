@@ -42,7 +42,7 @@ def get_base64_image(image_path):
         return None
 
 # Get doctor image
-doctor_image_path = os.path.join(dir, "image", "Doctor_6.png")
+doctor_image_path = os.path.join(dir, "image", "Doctor_7.png")
 doctor_base64 = get_base64_image(doctor_image_path)
 
 # Get doctor_1 image for form section
