@@ -1,4 +1,11 @@
-# 🌟 VITA - VinBig Intelligent Treatment Assistant  
+# 🌟 VITA - VinBig Intelligent Treatmen---
+
+## 📢 Thông báo phiên bản  
+
+### 🎉 VITA Version 1.1 - Hiện đã có mặt!  
+![VITA 1.1](image/vita_1.png)  
+
+---ant  
 > 💡 *AI thông minh – Đồng hành cùng sức khỏe của bạn*  
 
 ![Homepage](asset/image.png)
@@ -39,7 +46,17 @@ góp phần xây dựng một **tương lai khỏe mạnh hơn cho tất cả m�
 
 ---
 
-## 🖼️ Giao diện ứng dụng  
+## � Thông báo phiên bản  
+
+### 🎉 VITA Version 1.1 - Hiện đã có mặt!  
+![VITA 1.1](image/vita_1.png)  
+
+
+## �️ Giao diện ứng dụng
+
+---
+
+## �🖼️ Giao diện ứng dụng  
 
 ### 🏠 Trang chủ  
 ![Homepage](asset/Homepage_1.jpeg)  
