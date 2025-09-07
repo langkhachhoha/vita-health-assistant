@@ -44,17 +44,13 @@ góp phần xây dựng một **tương lai khỏe mạnh hơn cho tất cả m�
 
 ---
 
-## � Thông báo phiên bản  
+## 📢 Thông báo phiên bản  
 
 ### 🎉 VITA Version 1.1 - Hiện đã có mặt!  
+**📅 Ngày phát hành: 07 tháng 09 năm 2025**  
 ![VITA 1.1](image/vita_1.png)  
 
-
-## �️ Giao diện ứng dụng
-
----
-
-## �🖼️ Giao diện ứng dụng  
+## 🖼️ Giao diện ứng dụng  
 
 ### 🏠 Trang chủ  
 ![Homepage](asset/Homepage_1.jpeg)  
@@ -136,7 +132,7 @@ streamlit run Doctor_app/Homepage.py
 ➡️ **Truy cập:** http://localhost:8501
 ![Homepage](asset/Homepage_2.jpeg)  
 
-### � **Cách sử dụng**
+### 🐳 **Cách sử dụng**
 
 #### **🏠 Trang chủ**
 - Chọn chức năng muốn sử dụng từ menu bên trái
