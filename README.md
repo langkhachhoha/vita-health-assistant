@@ -41,13 +41,6 @@ VITA hướng đến việc trở thành **người bạn đồng hành tin cậ
 mang lại trải nghiệm y tế **an toàn – chính xác – hiệu quả**,  
 góp phần xây dựng một **tương lai khỏe mạnh hơn cho tất cả mọi người**.  
 
----
-
-## 📢 Thông báo phiên bản  
-
-### 🎉 VITA Version 1.1 - Hiện đã có mặt!  
-**📅 Ngày phát hành: 07 tháng 09 năm 2025**  
-![VITA 1.1](image/vita_1.png)  
 
 ## 🖼️ Giao diện ứng dụng  
 
