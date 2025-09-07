@@ -1,4 +1,4 @@
-# 🌟 VITA - VinBig Intelligent Treatmen---
+# 🌟 VITA - VinBig Intelligent Treatment -
 
 > 💡 *AI thông minh – Đồng hành cùng sức khỏe của bạn*  
 
