@@ -1,11 +1,5 @@
 # 🌟 VITA - VinBig Intelligent Treatmen---
 
-## 📢 Thông báo phiên bản  
-
-### 🎉 VITA Version 1.1 - Hiện đã có mặt!  
-![VITA 1.1](image/vita_1.png)  
-
----ant  
 > 💡 *AI thông minh – Đồng hành cùng sức khỏe của bạn*  
 
 ![Homepage](asset/image.png)
@@ -20,6 +14,10 @@
 - **Đồng hành lâu dài** trong việc theo dõi, phòng ngừa và cải thiện sức khỏe cộng đồng  
 
 ---
+## 📢 Thông báo phiên bản  
+
+### 🎉 VITA Version 1.1 - Hiện đã có mặt!  
+![VITA 1.1](image/vita_1.png)  
 
 ## 🚀 Tính năng chính  
 
