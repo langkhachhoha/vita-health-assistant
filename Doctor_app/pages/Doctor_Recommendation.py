@@ -48,6 +48,78 @@ def get_doctor_by_id(doctor_id, database):
         pass
     return None
 
+def get_doctor_image_base64(doctor_id, dir):
+    """Get base64 encoded image for a doctor by ID"""
+    try:
+        doc_index = int(doctor_id.split('_')[1])
+        # Try .jpg first
+        image_path = os.path.join(dir, "Doctor_avatar", f"Doctor_{doc_index}.jpg")
+        image_base64 = get_base64_image(image_path)
+        if image_base64:
+            return image_base64
+        
+        # Try .png if .jpg doesn't exist
+        image_path = os.path.join(dir, "Doctor_avatar", f"Doctor_{doc_index}.png")
+        return get_base64_image(image_path)
+    except:
+        return None
+
+def create_related_doctors_grid(another_doctors, main_doctor_id, doctor_database, dir):
+    """Create HTML grid for related doctors (excluding main doctor)"""
+    if not another_doctors or len(another_doctors) < 2:
+        return ""
+    
+    # Filter out the main doctor from the list
+    related_doctors = [doc_id for doc_id in another_doctors if doc_id != main_doctor_id][:4]
+    
+    if not related_doctors:
+        return ""
+    
+    grid_html = """
+    <div class="related-doctors-section">
+        <div class="related-doctors-title">👨‍⚕️ Các bác sĩ liên quan khác</div>
+        <div class="doctors-grid">
+    """
+    
+    for doc_id in related_doctors:
+        doctor_info = get_doctor_by_id(doc_id, doctor_database)
+        if doctor_info:
+            # Get doctor image
+            doctor_image_base64 = get_doctor_image_base64(doc_id, dir)
+            image_html = ""
+            if doctor_image_base64:
+                image_html = f'<img src="data:image/jpeg;base64,{doctor_image_base64}" class="doctor-mini-image" alt="Doctor">'
+            
+            # Get doctor info - escape HTML special characters
+            name = doctor_info.get('ten_bac_si', 'Không xác định').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
+            specialty_list = doctor_info.get('chuyen_mon', [])
+            specialty = ', '.join(specialty_list)
+            if len(specialty) > 50:
+                specialty = specialty[:50] + '...'
+            specialty = specialty.replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
+            
+            workplace = doctor_info.get('noi_lam_viec', '')
+            if len(workplace) > 60:
+                workplace = workplace[:60] + '...'
+            workplace = workplace.replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
+            
+            grid_html += f"""
+            <div class="doctor-mini-card">
+                {image_html}
+                <div class="doctor-info-content">
+                    <div class="doctor-mini-name">{name}</div>
+                    <div class="doctor-mini-specialty">{specialty}</div>
+                    <div class="doctor-mini-workplace">{workplace}</div>
+                </div>
+            </div>
+            """
+    
+    grid_html += """
+        </div>
+    </div>
+    """
+    return grid_html
+
 def clean_html_text(text):
     """Remove HTML tags and clean up text"""
     if not text:
@@ -76,7 +148,7 @@ def send_recommendation_request(symptoms):
         response = requests.post(
             "http://localhost:5002/recommend",
             json={"message": symptoms},
-            timeout=60
+            timeout=90
         )
         if response.status_code == 200:
             return response.json()
@@ -134,7 +206,7 @@ st.markdown(f"""
     }}
     
     .main .block-container {{
-        max-width: 800px !important;
+        max-width: 900px !important;
         padding: 2rem !important;
         background: rgba(255, 255, 255, 0.95) !important;
         backdrop-filter: blur(10px) !important;
@@ -359,6 +431,178 @@ st.markdown(f"""
         50% {{ opacity: 1; }}
     }}
     
+    /* Related doctors grid styling */
+    .related-doctors-section {{
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(229, 231, 235, 0.5);
+    }}
+    
+    .related-doctors-title {{
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #1f2937;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #e5e7eb;
+    }}
+    
+    .doctors-grid {{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 100%;
+    }}
+    
+    .doctor-mini-card {{
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        border-radius: 8px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        position: relative;
+        overflow: hidden;
+    }}
+    
+    .doctor-mini-card:hover {{
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+        border-color: rgba(59, 130, 246, 0.4);
+    }}
+    
+    .doctor-mini-card::before {{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+    }}
+    
+    .doctor-mini-card:hover::before {{
+        left: 100%;
+    }}
+    
+    .doctor-mini-image {{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid rgba(59, 130, 246, 0.3);
+        margin-right: 1rem;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+    }}
+    
+    .doctor-mini-card:hover .doctor-mini-image {{
+        border-color: rgba(59, 130, 246, 0.6);
+        transform: scale(1.05);
+    }}
+    
+    .doctor-info-content {{
+        flex: 1;
+        position: relative;
+        z-index: 1;
+    }}
+    
+    .doctor-mini-name {{
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 0.3rem;
+        line-height: 1.2;
+    }}
+    
+    .doctor-mini-specialty {{
+        font-size: 0.9rem;
+        color: #3b82f6;
+        font-weight: 500;
+        margin-bottom: 0.3rem;
+    }}
+    
+    .doctor-mini-workplace {{
+        font-size: 0.8rem;
+        color: #6b7280;
+        line-height: 1.3;
+    }}
+    
+    /* Responsive design for mobile */
+    @media (max-width: 768px) {{
+        .main .block-container {{
+            max-width: 95% !important;
+            padding: 1rem !important;
+            margin: 1rem auto !important;
+        }}
+        
+        .doctors-grid {{
+            gap: 0.8rem;
+        }}
+        
+        .doctor-mini-card {{
+            padding: 0.8rem;
+            flex-direction: column;
+            text-align: center;
+        }}
+        
+        .doctor-mini-image {{
+            width: 60px;
+            height: 60px;
+            margin-right: 0;
+            margin-bottom: 0.5rem;
+        }}
+        
+        .doctor-mini-name {{
+            font-size: 0.9rem;
+        }}
+        
+        .doctor-mini-specialty {{
+            font-size: 0.75rem;
+        }}
+        
+        .doctor-mini-workplace {{
+            font-size: 0.7rem;
+        }}
+        
+        .related-doctors-title {{
+            font-size: 1.2rem;
+        }}
+    }}
+    
+    @media (max-width: 480px) {{
+        .doctor-mini-card {{
+            padding: 0.6rem;
+        }}
+        
+        .doctor-mini-image {{
+            width: 50px;
+            height: 50px;
+        }}
+        
+        .doctor-mini-name {{
+            font-size: 0.85rem;
+        }}
+        
+        .doctor-mini-specialty {{
+            font-size: 0.7rem;
+        }}
+        
+        .doctor-mini-workplace {{
+            font-size: 0.65rem;
+        }}
+    }}
+    
     /* Footer divider - special styling */
     .footer-divider {{
         border: none;
@@ -438,6 +682,7 @@ if server_online:
                 if result and result.get('status') == 'success':
                     doctor_id = result.get('ID', '')
                     think_result = result.get('Think', '')
+                    another_doctors = result.get('another_doctor', [])
                     
                     # Get doctor information
                     doctor_info = get_doctor_by_id(doctor_id, doctor_database)
@@ -445,8 +690,12 @@ if server_online:
                     if doctor_info:
                         # Display doctor card with image
                         doctor_image_html = ""
-                        doctor_1_image_path = os.path.join(dir, "Doctor_image", f"Doctor_{int(doctor_id.split('_')[1])}.png")
+                        
+                        doctor_1_image_path = os.path.join(dir, "Doctor_avatar", f"Doctor_{int(doctor_id.split('_')[1])}.jpg")
                         doctor_1_base64 = get_base64_image(doctor_1_image_path)
+                        if not doctor_1_base64:
+                            doctor_1_image_path = os.path.join(dir, "Doctor_avatar", f"Doctor_{int(doctor_id.split('_')[1])}.png")
+                            doctor_1_base64 = get_base64_image(doctor_1_image_path)
                         if doctor_1_base64:
                             doctor_image_html = f'<img src="data:image/png;base64,{doctor_1_base64}" class="doctor-result-image" alt="Doctor">'
                         
@@ -496,6 +745,48 @@ if server_online:
                         
                         
                         st.markdown('</div>', unsafe_allow_html=True)
+                        
+                        # Display related doctors grid
+                        if another_doctors and len(another_doctors) > 1:
+                            st.markdown("---")
+                            st.markdown("### 👨‍⚕️ Các bác sĩ liên quan khác")
+                            
+                            # Filter out the main doctor from the list
+                            related_doctors = [doc_id for doc_id in another_doctors if doc_id != doctor_id][:4]
+                            
+                            for doc_id in related_doctors:
+                                doctor_info = get_doctor_by_id(doc_id, doctor_database)
+                                if doctor_info:
+                                    col1, col2 = st.columns([1, 3])
+                                    
+                                    with col1:
+                                        # Try to display doctor image
+                                        try:
+                                            doc_index = int(doc_id.split('_')[1])
+                                            img_path = os.path.join(dir, "Doctor_avatar", f"Doctor_{doc_index}.jpg")
+                                            if os.path.exists(img_path):
+                                                st.image(img_path, width=80)
+                                            else:
+                                                img_path = os.path.join(dir, "Doctor_avatar", f"Doctor_{doc_index}.png")
+                                                if os.path.exists(img_path):
+                                                    st.image(img_path, width=80)
+                                                else:
+                                                    st.write("🩺")
+                                        except:
+                                            st.write("🩺")
+                                    
+                                    with col2:
+                                        st.markdown(f"**{doctor_info.get('ten_bac_si', 'Không xác định')}**")
+                                        specialty = ', '.join(doctor_info.get('chuyen_mon', []))
+                                        if len(specialty) > 1500:
+                                            specialty = specialty[:1500] + '...'
+                                        st.markdown(f"*{specialty}*")
+                                        workplace = doctor_info.get('noi_lam_viec', '')
+                                        if len(workplace) > 6000:
+                                            workplace = workplace[:6000] + '...'
+                                        st.markdown(f"📍 {workplace}")
+                                    
+                                    st.markdown("---")
                         
                         # Timestamp
                         st.info(f"⏰ {datetime.now().strftime('%H:%M:%S - %d/%m/%Y')}")

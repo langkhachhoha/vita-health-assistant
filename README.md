@@ -20,6 +20,7 @@
 
 ## 🚀 Tính năng chính  
 
+- 🔍 **Doctor Finder - Tìm kiếm bác sĩ thông minh** – AI phân tích triệu chứng và gợi ý bác sĩ chuyên khoa phù hợp nhất  
 - 🩺 **Phân tích nguy cơ sức khỏe** (tiểu đường, bệnh mãn tính) với độ chính xác cao  
 - 💬 **Chatbot tư vấn y tế thông minh** – hội thoại tự nhiên, thân thiện và cá nhân hóa  
 - 🆔 **Nhận dạng CCCD tự động** – nhập liệu nhanh chóng, chính xác và bảo mật  
@@ -53,7 +54,11 @@ góp phần xây dựng một **tương lai khỏe mạnh hơn cho tất cả m�
 ### 💬 Chatbot tư vấn y tế  
 ![Chatbot](asset/Chatbot_1.jpeg)  
 
-### 📱 Các tính năng khác  
+### � Doctor Finder - Tìm kiếm bác sĩ thông minh  
+![Doctor Finder 1](asset/Doctor_Finder_1.png)  
+![Doctor Finder 2](asset/Doctor_Finder_2.png)  
+
+### �📱 Các tính năng khác  
 <p align="center">
   <img src="asset/Homepage_3.jpeg" alt="Feature 1" width="250">
   <img src="asset/Diabete_2.jpeg" alt="Feature 2" width="250">
@@ -117,12 +122,18 @@ python Doctor_app/DiabeteDoctor-Server.py
 # Chạy server Chatbot y tế
 python Doctor_app/Doctor_chatbot_server.py
 
+# Chạy server tìm kiếm bác sĩ (Doctor Finder)
+python Doctor_app/Doctor_Recommendation_Server.py
+
 # Cuối cùng, chạy giao diện chính
 streamlit run Doctor_app/Homepage.py
 ```
 
-➡️ **Truy cập:** http://localhost:8501
-![Homepage](asset/Homepage_2.jpeg)  
+➡️ **Truy cập:** 
+- **Giao diện chính:** http://localhost:8501
+- **Doctor Finder:** http://localhost:8501 (Từ menu bên trái chọn "Doctor_Recommendation")
+
+![Homepage](asset/Homepage_2.png)  
 
 ### 🐳 **Cách sử dụng**
 
@@ -139,6 +150,17 @@ streamlit run Doctor_app/Homepage.py
 1. Nhập câu hỏi về sức khỏe
 2. AI sẽ tư vấn và đưa ra lời khuyên
 3. Có thể hỏi tiếp các câu hỏi liên quan
+
+#### **🔍 Doctor Finder - Tìm kiếm bác sĩ thông minh**
+1. **Mô tả triệu chứng**: Nhập chi tiết triệu chứng bạn đang gặp phải
+   - Ví dụ: "đau đầu liên tục, sốt cao, ho khan kéo dài..."
+2. **AI phân tích**: Hệ thống AI sẽ phân tích triệu chứng và tìm bác sĩ phù hợp
+3. **Gợi ý bác sĩ chính**: Hiển thị thông tin chi tiết về bác sĩ được khuyến nghị:
+   - Ảnh đại diện và thông tin cá nhân
+   - Chuyên môn và kinh nghiệm
+   - Nơi làm việc và dịch vụ
+4. **Bác sĩ liên quan**: Danh sách 4 bác sĩ khác có thể tư vấn cho trường hợp của bạn
+5. **Lưu ý**: Chạy file Kaggle trước, xong nối cổng Ngrok vào Server. Đảm bảo server `Doctor_Recommendation_Server.py` đang chạy trước khi sử dụng
 
 #### **🆔 Quản lý hồ sơ**
 - Chụp ảnh CCCD để tạo hồ sơ bệnh nhân tự động
@@ -162,8 +184,9 @@ streamlit run Doctor_app/Homepage.py
 
 ### 🐛 **Gặp lỗi?**
 - Kiểm tra lại API keys trong file `.env`
-- Đảm bảo đã cài đủ 4 servers
+- Đảm bảo đã cài đủ 5 servers (kể cả Doctor_Recommendation_Server.py)
 - Kiểm tra kết nối internet
+- Đối với Doctor Finder: Đảm bảo database bác sĩ và ảnh avatar đã được tải đúng
 
 ### 📞 **Liên hệ**
 📧 **Hỗ trợ kỹ thuật:** haminhhieu1005@gmail.com 
