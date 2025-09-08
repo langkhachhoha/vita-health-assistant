@@ -958,6 +958,10 @@ st.markdown("""
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
+.recommendation-card {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
 .future-section {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 30px;
@@ -982,7 +986,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Feature Cards với hover effects
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.markdown("""
@@ -1046,6 +1050,28 @@ with col3:
             • Hướng dẫn chăm sóc tại nhà<br>
             • Kết nối bác sĩ khi cần thiết<br><br>
             <strong>🎯 Khả năng:</strong> Phản hồi tức thì, ngôn ngữ tự nhiên
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col4:
+    st.markdown("""
+    <div class="feature-card recommendation-card">
+        <div class="feature-title">
+            👩‍⚕️ Gợi ý bác sĩ AI
+            <span class="feature-arrow">▶</span>
+        </div>
+        <div class="feature-description">
+            AI thông minh gợi ý bác sĩ chuyên khoa phù hợp dựa trên triệu chứng
+        </div>
+        <div class="feature-details">
+            <strong>✨ Tính năng:</strong><br>
+            • Phân tích triệu chứng thông minh<br>
+            • Gợi ý bác sĩ chuyên khoa<br>
+            • Kết nối với hệ thống Vinmec<br>
+            • Đánh giá mức độ khẩn cấp<br>
+            • Thông tin chi tiết bác sĩ<br><br>
+            <strong>🎯 Khả năng:</strong> Tìm đúng chuyên khoa trong 30 giây
         </div>
     </div>
     """, unsafe_allow_html=True)
