@@ -98,8 +98,8 @@ doctor_7_image_path = os.path.join(dir, "image", "Doctor_7.png")
 doctor_7_base64 = get_base64_image(doctor_7_image_path)
 
 # Get Doctor_1 image for header
-doctor_1_image_path = os.path.join(dir, "Doctor_image", "Doctor_1.png")
-doctor_1_base64 = get_base64_image(doctor_1_image_path)
+# doctor_1_image_path = os.path.join(dir, "Doctor_image", "Doctor_1.png")
+# doctor_1_base64 = get_base64_image(doctor_1_image_path)
 
 # Simple, clean CSS with Doctor_7 background
 if doctor_7_base64:
@@ -445,6 +445,8 @@ if server_online:
                     if doctor_info:
                         # Display doctor card with image
                         doctor_image_html = ""
+                        doctor_1_image_path = os.path.join(dir, "Doctor_image", f"Doctor_{int(doctor_id.split('_')[1])}.png")
+                        doctor_1_base64 = get_base64_image(doctor_1_image_path)
                         if doctor_1_base64:
                             doctor_image_html = f'<img src="data:image/png;base64,{doctor_1_base64}" class="doctor-result-image" alt="Doctor">'
                         
