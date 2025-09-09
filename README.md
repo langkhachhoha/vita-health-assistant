@@ -15,9 +15,11 @@
 
 ---
 ## 📢 Thông báo phiên bản  
-### 🎉 07/09/2025: VITA Phiên bản 1.1
-![VITA 1.1](image/vita_1.png)  
+### 🎉 07/09/2025: VITA Phiên bản 1.0
+![VITA 1.0](image/vita_1.png)  
 
+### 🎉 09/09/2025: VITA Phiên bản 1.1
+![VITA 1.1](image/vita_2.png)  
 ## 🚀 Tính năng chính  
 
 - 🔍 **Doctor Finder - Tìm kiếm bác sĩ thông minh** – AI phân tích triệu chứng và gợi ý bác sĩ chuyên khoa phù hợp nhất  
